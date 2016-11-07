@@ -10,8 +10,21 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
+eureka:
+    instance:
+        prefer-ip-address: true
+    client:
+        enabled: true
+        healthcheck:
+            enabled: true
+        registerWithEureka: true
+        fetchRegistry: true
+        serviceUrl:
+            defaultZone: http://admin:admin@localhost:8761/eureka/
 
 spring:
+    autoconfigure:
+        exclude: org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration, org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration
     devtools:
         restart:
             enabled: false
@@ -38,6 +51,14 @@ spring:
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: false
             hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+    data:
+        cassandra:
+            contactPoints: localhost
+            protocolVersion: V4
+            compression: LZ4
+            keyspaceName: hispterstore
+            repositories:
+                enabled: false
     mail:
         host: localhost
         port: 25
@@ -61,6 +82,11 @@ server:
 # ===================================================================
 
 jhipster:
+    gateway:
+        rate-limiting: # Warning! Read the documentation in the GatewayConfiguration class.
+            enabled: false
+        authorized-microservices-endpoints: # Access Control Policy, if left empty for a route, all endpoints will be accessible
+            app1: /api # recommended prod configuration
     http:
         cache: # Used by the CachingHttpHeadersFilter
             timeToLiveInDays: 1461
@@ -95,3 +121,6 @@ jhipster:
             host: localhost
             port: 5000
             queueSize: 512
+        spectator-metrics: # Reports Spectator Circuit Breaker metrics in the logs
+            enabled: false
+            # edit spring.metrics.export.delay-millis to set report frequency

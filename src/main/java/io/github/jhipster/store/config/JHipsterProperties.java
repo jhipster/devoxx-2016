@@ -3,6 +3,10 @@ package io.github.jhipster.store.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.cors.CorsConfiguration;
 
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Properties specific to JHipster.
  *
@@ -28,6 +32,8 @@ public class JHipsterProperties {
     private final Metrics metrics = new Metrics();
 
     private final CorsConfiguration cors = new CorsConfiguration();
+
+    private final Gateway gateway = new Gateway();
 
     private final Ribbon ribbon = new Ribbon();
 
@@ -61,6 +67,10 @@ public class JHipsterProperties {
 
     public CorsConfiguration getCors() {
         return cors;
+    }
+
+    public Gateway getGateway() {
+        return gateway;
     }
 
     public Ribbon getRibbon() {
@@ -473,6 +483,61 @@ public class JHipsterProperties {
             public int getQueueSize() { return queueSize; }
 
             public void setQueueSize(int queueSize) { this.queueSize = queueSize; }
+        }
+
+        private final SpectatorMetrics spectatorMetrics = new SpectatorMetrics();
+
+        public SpectatorMetrics getSpectatorMetrics() { return spectatorMetrics; }
+
+        public static class SpectatorMetrics {
+
+            private boolean enabled = false;
+
+            public boolean isEnabled() { return enabled; }
+
+            public void setEnabled(boolean enabled) { this.enabled = enabled; }
+        }
+    }
+
+    public static class Gateway {
+
+        private final RateLimiting rateLimiting = new RateLimiting();
+
+        public RateLimiting getRateLimiting() {
+            return rateLimiting;
+        }
+
+        private Map<String, List<String>> authorizedMicroservicesEndpoints = new LinkedHashMap<>();
+
+        public Map<String, List<String>> getAuthorizedMicroservicesEndpoints() {
+            return authorizedMicroservicesEndpoints;
+        }
+
+        public void setAuthorizedMicroservicesEndpoints(Map<String, List<String>> authorizedMicroservicesEndpoints) {
+            this.authorizedMicroservicesEndpoints = authorizedMicroservicesEndpoints;
+        }
+
+        public static class RateLimiting {
+
+            private boolean enabled = false;
+
+            private long limit = 100000L;
+
+            public boolean isEnabled() {
+                return enabled;
+            }
+
+            public void setEnabled(boolean enabled) {
+                this.enabled = enabled;
+            }
+
+            public long getLimit() {
+                return this.limit;
+            }
+
+            public void setLimit(long limit) {
+                this.limit = limit;
+            }
         }
     }
 

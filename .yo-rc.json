@@ -18,7 +18,7 @@
     "enableSocialSignIn": false,
     "jwtSecretKey": "7b45f46ff47db66e9351355df93f5749f0b763e3",
     "useSass": false,
-    "applicationType": "monolith",
+    "applicationType": "gateway",
     "testFrameworks": [
       "gatling"
     ],
@@ -29,6 +29,7 @@
       "en",
       "fr",
       "hi"
-    ]
+    ],
+    "serviceDiscoveryType": "eureka"
   }
 }

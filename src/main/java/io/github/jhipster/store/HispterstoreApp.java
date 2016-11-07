@@ -11,6 +11,8 @@ import org.springframework.boot.actuate.autoconfigure.*;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
@@ -22,8 +24,10 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @ComponentScan
-@EnableAutoConfiguration(exclude = { MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class })
+@EnableAutoConfiguration(exclude = { MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class, MetricsDropwizardAutoConfiguration.class })
 @EnableConfigurationProperties({ JHipsterProperties.class, LiquibaseProperties.class })
+@EnableDiscoveryClient
+@EnableZuulProxy
 public class HispterstoreApp {
 
     private static final Logger log = LoggerFactory.getLogger(HispterstoreApp.class);
@@ -71,5 +75,9 @@ public class HispterstoreApp {
             InetAddress.getLocalHost().getHostAddress(),
             env.getProperty("server.port"));
 
+        String configServerStatus = env.getProperty("configserver.status");
+        log.info("\n----------------------------------------------------------\n\t" +
+        "Config Server: \t{}\n----------------------------------------------------------",
+            configServerStatus == null ? "Not found or not setup for this application" : configServerStatus);
     }
 }

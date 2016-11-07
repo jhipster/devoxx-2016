@@ -28,6 +28,8 @@ public class LoggingConfiguration {
     @Value("${server.port}")
     private String serverPort;
 
+    @Value("${eureka.instance.instanceId}")
+    private String instanceId;
 
     @Inject
     private JHipsterProperties jHipsterProperties;
@@ -50,7 +52,8 @@ public class LoggingConfiguration {
         LogstashSocketAppender logstashAppender = new LogstashSocketAppender();
         logstashAppender.setName("LOGSTASH");
         logstashAppender.setContext(context);
-        String customFields = "{\"app_name\":\"" + appName + "\",\"app_port\":\"" + serverPort + "\"}";
+        String customFields = "{\"app_name\":\"" + appName + "\",\"app_port\":\"" + serverPort + "\"," +
+            "\"instance_id\":\"" + instanceId + "\"}";
 
         // Set the Logstash appender config from JHipster properties
         logstashAppender.setSyslogHost(jHipsterProperties.getLogging().getLogstash().getHost());

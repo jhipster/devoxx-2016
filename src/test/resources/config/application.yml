@@ -10,10 +10,18 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
+eureka:
+    client:
+        enabled: false
+    instance:
+        appname: hispterstore
+        instanceId: hispterstore:${spring.application.instance_id:${random.value}}
 
 spring:
     application:
         name: hispterstore
+    autoconfigure:
+        exclude: org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration, org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration
     jackson:
         serialization.write_dates_as_timestamps: false
     datasource:
@@ -36,6 +44,15 @@ spring:
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: true
             hibernate.hbm2ddl.auto: validate
+    data:
+        cassandra:
+            contactPoints: localhost
+            port: 9142
+            protocolVersion: V4
+            compression: NONE
+            keyspaceName: cassandra_unit_keyspace
+            repositories:
+                enabled: false
     mail:
         host: localhost
     mvc:

@@ -11,6 +11,9 @@
             "error": "त्रुटि"
         },
         "indicator": {
+            "discoveryComposite": "Discovery Composite",
+            "refreshScope": "Microservice Refresh Scope",
+            "configServer": "Microservice Config Server",
             "diskSpace": "डिस्क स्थान",
             "mail": "ईमेल",
             "db": "Database"
