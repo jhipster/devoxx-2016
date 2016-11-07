@@ -28,7 +28,7 @@ import java.util.Optional;
 public class WishListResource {
 
     private final Logger log = LoggerFactory.getLogger(WishListResource.class);
-        
+
     @Inject
     private WishListRepository wishListRepository;
 
@@ -89,7 +89,8 @@ public class WishListResource {
     @Timed
     public List<WishList> getAllWishLists() {
         log.debug("REST request to get all WishLists");
-        List<WishList> wishLists = wishListRepository.findAll();
+        // Hello Devoxx
+        List<WishList> wishLists = wishListRepository.findByUserIsCurrentUser();
         return wishLists;
     }
 
