@@ -6,7 +6,9 @@
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20161107091633_added_entity_WishList.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161107092429_added_entity_Wish.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="classpath:config/liquibase/changelog/20161107091633_added_entity_constraints_WishList.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161107092429_added_entity_constraints_Wish.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

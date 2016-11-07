@@ -1,0 +1,24 @@
+{
+    "hispterstoreApp": {
+        "wish" : {
+            "home": {
+                "title": "Wishes",
+                "createLabel": "नया Wish बनाएँ",
+                "createOrEditLabel": "Wish बनाएँ या संपादित करें",
+                "search": "Wish खोजें"
+            },
+            "created": "एक नया Wish [identifier: {{ param }}] तैयार है",
+            "updated": "एक Wish [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Wish [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Wish [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Wish"
+            },
+            "productId": "Product Id",
+            "price": "Price",
+            "wishList": "Wish List"
+        }
+    }
+}
