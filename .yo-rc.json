@@ -1,6 +1,6 @@
 {
   "generator-jhipster": {
-    "jhipsterVersion": "3.9.1",
+    "jhipsterVersion": "3.10.0",
     "baseName": "hispterstore",
     "packageName": "io.github.jhipster.store",
     "packageFolder": "io/github/jhipster/store",
