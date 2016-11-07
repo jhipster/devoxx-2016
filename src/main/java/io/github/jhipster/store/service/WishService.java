@@ -57,7 +57,7 @@ public class WishService {
     @Transactional(readOnly = true)
     public Page<Wish> findAll(Pageable pageable) {
         log.debug("Request to get all Wishes");
-        Page<Wish> result = wishRepository.findAll(pageable);
+        Page<Wish> result = wishRepository.findByWishListUserLogin(SecurityUtils.getCurrentUserLogin(), pageable);
         return result;
     }
 
