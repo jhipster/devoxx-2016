@@ -9,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,9 +38,7 @@ public class WishListResource {
      * @return the ResponseEntity with status 201 (Created) and with body the new wishList, or with status 400 (Bad Request) if the wishList has already an ID
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
-    @RequestMapping(value = "/wish-lists",
-        method = RequestMethod.POST,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping("/wish-lists")
     @Timed
     public ResponseEntity<WishList> createWishList(@Valid @RequestBody WishList wishList) throws URISyntaxException {
         log.debug("REST request to save WishList : {}", wishList);
@@ -63,9 +60,7 @@ public class WishListResource {
      * or with status 500 (Internal Server Error) if the wishList couldnt be updated
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
-    @RequestMapping(value = "/wish-lists",
-        method = RequestMethod.PUT,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping("/wish-lists")
     @Timed
     public ResponseEntity<WishList> updateWishList(@Valid @RequestBody WishList wishList) throws URISyntaxException {
         log.debug("REST request to update WishList : {}", wishList);
@@ -83,9 +78,7 @@ public class WishListResource {
      *
      * @return the ResponseEntity with status 200 (OK) and the list of wishLists in body
      */
-    @RequestMapping(value = "/wish-lists",
-        method = RequestMethod.GET,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping("/wish-lists")
     @Timed
     public List<WishList> getAllWishLists() {
         log.debug("REST request to get all WishLists");
@@ -99,9 +92,7 @@ public class WishListResource {
      * @param id the id of the wishList to retrieve
      * @return the ResponseEntity with status 200 (OK) and with body the wishList, or with status 404 (Not Found)
      */
-    @RequestMapping(value = "/wish-lists/{id}",
-        method = RequestMethod.GET,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping("/wish-lists/{id}")
     @Timed
     public ResponseEntity<WishList> getWishList(@PathVariable Long id) {
         log.debug("REST request to get WishList : {}", id);
@@ -119,9 +110,7 @@ public class WishListResource {
      * @param id the id of the wishList to delete
      * @return the ResponseEntity with status 200 (OK)
      */
-    @RequestMapping(value = "/wish-lists/{id}",
-        method = RequestMethod.DELETE,
-        produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping("/wish-lists/{id}")
     @Timed
     public ResponseEntity<Void> deleteWishList(@PathVariable Long id) {
         log.debug("REST request to delete WishList : {}", id);
