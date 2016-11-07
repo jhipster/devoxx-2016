@@ -1,0 +1,25 @@
+{
+    "hispterstoreApp": {
+        "wishList" : {
+            "home": {
+                "title": "Wish Lists",
+                "createLabel": "Create a new Wish List",
+                "createOrEditLabel": "Create or edit a Wish List",
+                "search": "Search for Wish List"
+            },
+            "created": "A new Wish List is created with identifier {{ param }}",
+            "updated": "A Wish List is updated with identifier {{ param }}",
+            "deleted": "A Wish List is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Wish List {{ id }}?"
+            },
+            "detail": {
+                "title": "Wish List"
+            },
+            "name": "Name",
+            "creationDate": "Creation Date",
+            "hidden": "Hidden",
+            "user": "User"
+        }
+    }
+}

@@ -37,5 +37,9 @@
            timeToLiveSeconds="3600">
     </cache>
     
+    <cache name="io.github.jhipster.store.domain.WishList"
+        timeToLiveSeconds="3600">
+    </cache>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </ehcache>
