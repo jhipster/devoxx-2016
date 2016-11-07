@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="hispterstoreApp.wishList.detail.title">Wish List</span> {{vm.wishList.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="hispterstoreApp.wishList.name">Name</span></dt>
+        <dd>
+            <span>{{vm.wishList.name}}</span>
+        </dd>
+        <dt><span data-translate="hispterstoreApp.wishList.creationDate">Creation Date</span></dt>
+        <dd>
+            <span>{{vm.wishList.creationDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hispterstoreApp.wishList.hidden">Hidden</span></dt>
+        <dd>
+            <span>{{vm.wishList.hidden}}</span>
+        </dd>
+        <dt><span data-translate="hispterstoreApp.wishList.user">User</span></dt>
+        <dd>
+            {{vm.wishList.user.login}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="wish-list-detail.edit({id:vm.wishList.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

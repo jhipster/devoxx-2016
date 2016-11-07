@@ -1,0 +1,34 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "wishList",
+            "otherEntityName": "wishList",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "productId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "BigDecimal",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        }
+    ],
+    "changelogDate": "20161107092429",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "wish",
+    "pagination": "pagination"
+}
