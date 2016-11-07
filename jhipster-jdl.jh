@@ -1,0 +1,39 @@
+
+entity Category {
+    name String
+}
+
+entity SubCategory {
+	name String,
+    alcohol Boolean
+}
+
+relationship OneToMany {
+	Category{subcategory} to
+    SubCategory{category(name)}
+}
+
+entity Product {
+    name String,
+    description String,
+    image ImageBlob,
+    price BigDecimal,
+    size Size
+}
+
+relationship ManyToMany {
+	Product{subcategory(name)} to
+    SubCategory{product}
+}
+
+entity Brand {
+	brandName String required
+}
+
+relationship OneToMany {
+	Brand{product} to Product{brand(brandName)}
+}
+
+enum Size {
+	S, M, L, XL, XXL
+}

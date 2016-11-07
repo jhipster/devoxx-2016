@@ -7,9 +7,15 @@
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20161107091633_added_entity_WishList.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20161107092429_added_entity_Wish.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161107105325_added_entity_Category.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161107105326_added_entity_SubCategory.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161107105327_added_entity_Product.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161107105328_added_entity_Brand.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="classpath:config/liquibase/changelog/20161107091633_added_entity_constraints_WishList.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20161107092429_added_entity_constraints_Wish.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161107105326_added_entity_constraints_SubCategory.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161107105327_added_entity_constraints_Product.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 
     <include file="classpath:config/liquibase/changelog/20161107110222_changelog.xml" relativeToChangelogFile="false"/>

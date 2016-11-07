@@ -1,0 +1,25 @@
+{
+    "hispterstoreApp": {
+        "subCategory" : {
+            "home": {
+                "title": "SubCategories",
+                "createLabel": "Créer un nouveau Sub Category",
+                "createOrEditLabel": "Créer ou éditer un Sub Category",
+                "search": "Recherche pour Sub Category"
+            },
+            "created": "Un nouveau Sub Category a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Sub Category avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Sub Category avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Sub Category {{ id }} ?"
+            },
+            "detail": {
+                "title": "Sub Category"
+            },
+            "name": "Name",
+            "alcohol": "Alcohol",
+            "category": "Category",
+            "product": "Product"
+        }
+    }
+}

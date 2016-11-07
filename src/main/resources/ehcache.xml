@@ -45,5 +45,37 @@
         timeToLiveSeconds="3600">
     </cache>
 
+    <cache name="io.github.jhipster.store.domain.Category"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="io.github.jhipster.store.domain.Category.subcategories"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="io.github.jhipster.store.domain.SubCategory"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="io.github.jhipster.store.domain.SubCategory.products"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="io.github.jhipster.store.domain.Product"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="io.github.jhipster.store.domain.Product.subcategories"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="io.github.jhipster.store.domain.Brand"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="io.github.jhipster.store.domain.Brand.products"
+        timeToLiveSeconds="3600">
+    </cache>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </ehcache>

@@ -1,0 +1,25 @@
+{
+    "hispterstoreApp": {
+        "subCategory" : {
+            "home": {
+                "title": "SubCategories",
+                "createLabel": "नया Sub Category बनाएँ",
+                "createOrEditLabel": "Sub Category बनाएँ या संपादित करें",
+                "search": "Sub Category खोजें"
+            },
+            "created": "एक नया Sub Category [identifier: {{ param }}] तैयार है",
+            "updated": "एक Sub Category [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Sub Category [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Sub Category [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Sub Category"
+            },
+            "name": "Name",
+            "alcohol": "Alcohol",
+            "category": "Category",
+            "product": "Product"
+        }
+    }
+}

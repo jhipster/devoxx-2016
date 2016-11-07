@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "product",
+            "otherEntityName": "product",
+            "otherEntityRelationshipName": "brand"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "brandName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20161107105328",
+    "entityTableName": "brand",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

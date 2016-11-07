@@ -32,16 +32,6 @@ public class Wish implements Serializable {
     @Column(name = "price", precision=10, scale=2, nullable = false)
     private BigDecimal price;
 
-    private int priority;
-
-    public int getPriority() {
-        return priority;
-    }
-
-    public void setPriority(int priority) {
-        this.priority = priority;
-    }
-
     @ManyToOne
     private WishList wishList;
 

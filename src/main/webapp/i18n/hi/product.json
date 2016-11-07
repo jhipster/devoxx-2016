@@ -1,0 +1,28 @@
+{
+    "hispterstoreApp": {
+        "product" : {
+            "home": {
+                "title": "Products",
+                "createLabel": "नया Product बनाएँ",
+                "createOrEditLabel": "Product बनाएँ या संपादित करें",
+                "search": "Product खोजें"
+            },
+            "created": "एक नया Product [identifier: {{ param }}] तैयार है",
+            "updated": "एक Product [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Product [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Product [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Product"
+            },
+            "name": "Name",
+            "description": "Description",
+            "image": "Image",
+            "price": "Price",
+            "size": "Size",
+            "subcategory": "Subcategory",
+            "brand": "Brand"
+        }
+    }
+}

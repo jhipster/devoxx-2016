@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="hispterstoreApp.subCategory.detail.title">Sub Category</span> {{vm.subCategory.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="hispterstoreApp.subCategory.name">Name</span></dt>
+        <dd>
+            <span>{{vm.subCategory.name}}</span>
+        </dd>
+        <dt><span data-translate="hispterstoreApp.subCategory.alcohol">Alcohol</span></dt>
+        <dd>
+            <span>{{vm.subCategory.alcohol}}</span>
+        </dd>
+        <dt><span data-translate="hispterstoreApp.subCategory.category">Category</span></dt>
+        <dd>
+            <a ui-sref="category-detail({id:vm.subCategory.category.id})">{{vm.subCategory.category.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="sub-category-detail.edit({id:vm.subCategory.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

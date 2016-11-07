@@ -1,0 +1,25 @@
+{
+    "hispterstoreApp": {
+        "subCategory" : {
+            "home": {
+                "title": "Sub Categories",
+                "createLabel": "Create a new Sub Category",
+                "createOrEditLabel": "Create or edit a Sub Category",
+                "search": "Search for Sub Category"
+            },
+            "created": "A new Sub Category is created with identifier {{ param }}",
+            "updated": "A Sub Category is updated with identifier {{ param }}",
+            "deleted": "A Sub Category is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sub Category {{ id }}?"
+            },
+            "detail": {
+                "title": "Sub Category"
+            },
+            "name": "Name",
+            "alcohol": "Alcohol",
+            "category": "Category",
+            "product": "Product"
+        }
+    }
+}

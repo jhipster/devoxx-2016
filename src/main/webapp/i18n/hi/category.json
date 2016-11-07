@@ -1,0 +1,23 @@
+{
+    "hispterstoreApp": {
+        "category" : {
+            "home": {
+                "title": "Categories",
+                "createLabel": "नया Category बनाएँ",
+                "createOrEditLabel": "Category बनाएँ या संपादित करें",
+                "search": "Category खोजें"
+            },
+            "created": "एक नया Category [identifier: {{ param }}] तैयार है",
+            "updated": "एक Category [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Category [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Category [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Category"
+            },
+            "name": "Name",
+            "subcategory": "Subcategory"
+        }
+    }
+}

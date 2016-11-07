@@ -1,0 +1,23 @@
+{
+    "hispterstoreApp": {
+        "brand" : {
+            "home": {
+                "title": "Brands",
+                "createLabel": "नया Brand बनाएँ",
+                "createOrEditLabel": "Brand बनाएँ या संपादित करें",
+                "search": "Brand खोजें"
+            },
+            "created": "एक नया Brand [identifier: {{ param }}] तैयार है",
+            "updated": "एक Brand [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Brand [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Brand [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Brand"
+            },
+            "brandName": "Brand Name",
+            "product": "Product"
+        }
+    }
+}

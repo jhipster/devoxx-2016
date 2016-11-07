@@ -9,6 +9,10 @@
                 "main": "Entités",
                 "wishList": "Wish List",
                 "wish": "Wish",
+                "category": "Category",
+                "subCategory": "Sub Category",
+                "product": "Product",
+                "brand": "Brand",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

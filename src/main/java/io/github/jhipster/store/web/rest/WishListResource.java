@@ -4,7 +4,6 @@ import com.codahale.metrics.annotation.Timed;
 import io.github.jhipster.store.domain.WishList;
 
 import io.github.jhipster.store.repository.WishListRepository;
-import io.github.jhipster.store.service.UserService;
 import io.github.jhipster.store.web.rest.util.HeaderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +16,6 @@ import javax.inject.Inject;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,12 +27,9 @@ import java.util.Optional;
 public class WishListResource {
 
     private final Logger log = LoggerFactory.getLogger(WishListResource.class);
-
+        
     @Inject
     private WishListRepository wishListRepository;
-
-    @Inject
-    private UserService userService;
 
     /**
      * POST  /wish-lists : Create a new wishList.
@@ -50,10 +45,7 @@ public class WishListResource {
         if (wishList.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("wishList", "idexists", "A new wishList cannot already have an ID")).body(null);
         }
-
-        WishList result = wishListRepository.save(wishList
-            .user(userService.getUserWithAuthorities())
-            .creationDate(LocalDate.now()));
+        WishList result = wishListRepository.save(wishList);
         return ResponseEntity.created(new URI("/api/wish-lists/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert("wishList", result.getId().toString()))
             .body(result);
@@ -90,8 +82,7 @@ public class WishListResource {
     @Timed
     public List<WishList> getAllWishLists() {
         log.debug("REST request to get all WishLists");
-        // Hello Devoxx
-        List<WishList> wishLists = wishListRepository.findByUserIsCurrentUser();
+        List<WishList> wishLists = wishListRepository.findAll();
         return wishLists;
     }
 
